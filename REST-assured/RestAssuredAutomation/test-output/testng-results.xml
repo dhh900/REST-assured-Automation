@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-18T13:59:04 EEST" name="Default suite" finished-at="2025-09-18T13:59:10 EEST" duration-ms="5938">
+    <groups>
+    </groups>
+    <test started-at="2025-09-18T13:59:04 EEST" name="Default test" finished-at="2025-09-18T13:59:10 EEST" duration-ms="5938">
+      <class name="tests.PutPatchDeleteExamples">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.PutPatchDeleteExamples@327514f]" started-at="2025-09-18T13:59:04 EEST" name="setup" finished-at="2025-09-18T13:59:04 EEST" duration-ms="519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testDelete()[pri:0, instance:tests.PutPatchDeleteExamples@327514f]" started-at="2025-09-18T13:59:04 EEST" name="testDelete" finished-at="2025-09-18T13:59:06 EEST" duration-ms="1235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDelete -->
+        <test-method signature="testPatch()[pri:0, instance:tests.PutPatchDeleteExamples@327514f]" started-at="2025-09-18T13:59:06 EEST" name="testPatch" finished-at="2025-09-18T13:59:06 EEST" duration-ms="430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPatch -->
+        <test-method signature="testPut()[pri:0, instance:tests.PutPatchDeleteExamples@327514f]" started-at="2025-09-18T13:59:06 EEST" name="testPut" finished-at="2025-09-18T13:59:06 EEST" duration-ms="276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPut -->
+      </class> <!-- tests.PutPatchDeleteExamples -->
+      <class name="tests.JSONSchemaValidator">
+        <test-method signature="testGet()[pri:0, instance:tests.JSONSchemaValidator@815b41f]" started-at="2025-09-18T13:59:06 EEST" name="testGet" finished-at="2025-09-18T13:59:07 EEST" duration-ms="1023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGet -->
+      </class> <!-- tests.JSONSchemaValidator -->
+      <class name="tests.XMLSchemaValidation">
+        <test-method signature="schemaValidation()[pri:0, instance:tests.XMLSchemaValidation@5542c4ed]" started-at="2025-09-18T13:59:07 EEST" name="schemaValidation" finished-at="2025-09-18T13:59:09 EEST" duration-ms="1360" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- schemaValidation -->
+      </class> <!-- tests.XMLSchemaValidation -->
+      <class name="tests.GetAndPostExamples">
+        <test-method signature="testGet()[pri:0, instance:tests.GetAndPostExamples@1573f9fc]" started-at="2025-09-18T13:59:09 EEST" name="testGet" finished-at="2025-09-18T13:59:09 EEST" duration-ms="388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGet -->
+        <test-method signature="testPost()[pri:0, instance:tests.GetAndPostExamples@1573f9fc]" started-at="2025-09-18T13:59:09 EEST" name="testPost" finished-at="2025-09-18T13:59:09 EEST" duration-ms="247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPost -->
+      </class> <!-- tests.GetAndPostExamples -->
+      <class name="tests.TestsOnLocalAPI">
+        <test-method signature="delete()[pri:0, instance:tests.TestsOnLocalAPI@7e6f74c]" started-at="2025-09-18T13:59:10 EEST" name="delete" finished-at="2025-09-18T13:59:10 EEST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete -->
+        <test-method signature="get()[pri:0, instance:tests.TestsOnLocalAPI@7e6f74c]" started-at="2025-09-18T13:59:10 EEST" name="get" finished-at="2025-09-18T13:59:10 EEST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get -->
+      </class> <!-- tests.TestsOnLocalAPI -->
+      <class name="tests.SoapXMLRequest">
+        <test-method signature="validateSoapXML()[pri:0, instance:tests.SoapXMLRequest@44c03695]" started-at="2025-09-18T13:59:09 EEST" name="validateSoapXML" finished-at="2025-09-18T13:59:10 EEST" duration-ms="450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSoapXML -->
+      </class> <!-- tests.SoapXMLRequest -->
+      <class name="tests.TestsExamples">
+        <test-method signature="test_1()[pri:0, instance:tests.TestsExamples@dd05255]" started-at="2025-09-18T13:59:10 EEST" name="test_1" finished-at="2025-09-18T13:59:10 EEST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1 -->
+        <test-method signature="test_2()[pri:0, instance:tests.TestsExamples@dd05255]" started-at="2025-09-18T13:59:10 EEST" name="test_2" finished-at="2025-09-18T13:59:10 EEST" duration-ms="212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_2 -->
+      </class> <!-- tests.TestsExamples -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

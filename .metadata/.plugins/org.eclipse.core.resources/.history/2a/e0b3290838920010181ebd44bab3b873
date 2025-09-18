@@ -1,0 +1,17 @@
+package tests;
+
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.given;
+
+public class ApiKeyTest {
+
+    @Test
+    public void testWithApiKey() {
+        given()
+            .header("x-api-key", "reqres-free-v1")   // هنا بتحط الـ API Key
+        .when()
+            .get("https://reqres.in/api/users?page=2")   // الـ endpoint
+        .then()
+            .statusCode(200);   // تأكد إن الاستجابة 200 OK
+    }
+}

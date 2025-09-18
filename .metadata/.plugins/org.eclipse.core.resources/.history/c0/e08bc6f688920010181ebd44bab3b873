@@ -1,0 +1,33 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+           targetNamespace="http://tempuri.org/" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+
+  <!-- Import the local SOAP envelope schema -->
+  <xs:import namespace="http://schemas.xmlsoap.org/soap/envelope/" 
+             schemaLocation="soap-envelope.xsd"/>
+
+  <!-- Define the AddResponse element (your custom part) -->
+  <xs:element name="AddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="AddResult"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Override/Extend the SOAP Body to specifically allow AddResponse in the tempuri namespace -->
+  <xs:redefine schemaLocation="soap-envelope.xsd">
+    <xs:complexType name="Body">
+      <xs:complexContent>
+        <xs:extension base="soap:Body">
+          <xs:sequence>
+            <xs:element ref="AddResponse" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:redefine>
+
+</xs:schema>

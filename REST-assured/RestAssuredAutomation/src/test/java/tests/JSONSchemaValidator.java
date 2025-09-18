@@ -1,0 +1,15 @@
+package tests;
+
+import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
+import org.testng.annotations.Test;
+
+public class JSONSchemaValidator extends BaseTest {
+
+	@Test
+	public void testGet() {
+		given().when().get("/users?page=2").then().assertThat().body(matchesJsonSchemaInClasspath("db.json"))
+				.statusCode(200);
+	}
+}

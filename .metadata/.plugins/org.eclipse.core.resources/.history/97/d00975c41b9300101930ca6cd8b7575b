@@ -1,0 +1,31 @@
+package tests;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeSuite;
+
+import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.specification.RequestSpecification;
+
+public class BaseTest {
+
+	@BeforeSuite
+	public void setup() {
+		RequestSpecification reqSpec = new RequestSpecBuilder().setBaseUri("https://reqres.in/api") // global base for
+																									// reqres tests
+				.addHeader("x-api-key", "reqres-free-v1") // global API key
+				.build();
+
+		RestAssured.requestSpecification = reqSpec;
+
+		System.out.println("API Key verified and default baseUri set for reqres tests");
+	}
+
+	@AfterMethod
+	public void resetSettings() {
+		RestAssured.baseURI = "https://reqres.in/api";
+		// أو
+		RestAssured.reset(); // ده بيمسح كل الـ settings
+	}
+
+}

@@ -1,0 +1,34 @@
+package tests;
+import static io.restassured.RestAssured.given;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItems;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class GetAndPostExamples {
+
+	@Test
+	public void testGet() {	
+		RestAssured.baseURI = "https://reqres.in/api";
+		given().get("/users?page=2").then().statusCode(200)
+		.body("data[4].first_name", equalTo("George"))
+		.body("data.first_name", hasItems("George","Rachel"));
+	}
+	@Test
+	public void testPost() {	
+		Map<String,	Object>map= new HashMap<String,	Object>();
+		map.put("name", "Raghav");
+		map.put("job", "Teacher");
+		
+		System.out.println(map);
+		
+	}
+}

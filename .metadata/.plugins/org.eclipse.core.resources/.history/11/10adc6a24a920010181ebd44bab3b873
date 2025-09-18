@@ -1,0 +1,26 @@
+package tests;
+
+import org.json.simple.JSONObject;
+import org.testng.annotations.Test;
+import io.restassured.*;
+import static io.restassured.RestAssured.given;
+
+public class TestsOnLocalAPI {
+	@Test
+	public void get() {
+		RestAssured.baseURI="http://localhost:3000/";
+		given().get("/users").then().statusCode(200).log().all();
+	}
+	
+	@Test
+	public void post() {
+		JSONObject request=new JSONObject();
+		request.put("firstName","Laila");
+		request.put("lastName","Mohamed");
+		request.put("subjectId",1);
+
+		
+	}
+	
+	
+}

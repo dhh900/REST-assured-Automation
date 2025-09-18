@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+           targetNamespace="http://schemas.xmlsoap.org/soap/envelope/"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+  <xs:element name="Envelope" type="SOAP-ENV:Envelope"/>
+  <xs:complexType name="Envelope">
+    <xs:sequence>
+      <xs:element ref="SOAP-ENV:Header" minOccurs="0"/>
+      <xs:element ref="SOAP-ENV:Body" minOccurs="1"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other"/>
+  </xs:complexType>
+  <xs:element name="Header" type="SOAP-ENV:Header"/>
+  <xs:complexType name="Header">
+    <xs:sequence>
+      <xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other"/>
+  </xs:complexType>
+  <xs:element name="Body" type="SOAP-ENV:Body"/>
+  <xs:complexType name="Body">
+    <xs:sequence>
+      <xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other"/>
+  </xs:complexType>
+  <xs:element name="Fault" type="SOAP-ENV:Fault"/>
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element name="faultcode" type="xs:QName"/>
+      <xs:element name="faultstring" type="xs:string"/>
+      <xs:element name="faultactor" type="xs:anyURI" minOccurs="0"/>
+      <xs:element name="detail" type="SOAP-ENV:detail" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detail">
+    <xs:sequence>
+      <xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other"/>
+  </xs:complexType>
+</xs:schema>

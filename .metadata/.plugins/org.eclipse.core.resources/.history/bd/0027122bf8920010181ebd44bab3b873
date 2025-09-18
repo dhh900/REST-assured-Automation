@@ -1,0 +1,19 @@
+package tests;
+
+import static io.restassured.RestAssured.*;
+
+import org.testng.annotations.BeforeSuite;
+
+public class BaseTest {
+
+    @BeforeSuite
+    public void setup() {
+        baseURI = "https://reqres.in";  // ✅ global base URI
+
+        requestSpecification = given()
+            .header("x-api-key", "reqres-free-v1") // ✅ global header
+            .contentType("application/json");       // default content type
+
+        System.out.println("Global config done: Base URI + API Key");
+    }
+}

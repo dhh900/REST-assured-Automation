@@ -1,0 +1,17 @@
+package tests;
+
+import static io.restassured.RestAssured.given;
+
+import org.testng.annotations.BeforeSuite;
+
+public class BaseTest {
+
+	@BeforeSuite
+	public void testWithApiKey() {
+		given().header("x-api-key", "reqres-free-v1").when().get("https://reqres.in/api/users?page=2").then()
+				.statusCode(200);
+
+		System.out.println("API Key verified before running tests");
+
+	}
+}
